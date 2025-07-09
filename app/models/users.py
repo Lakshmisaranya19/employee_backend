@@ -1,4 +1,3 @@
-# defines the DB
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, func
 from app.db import Base
 
@@ -11,4 +10,5 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
+
 
